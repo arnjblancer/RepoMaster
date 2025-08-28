@@ -16,7 +16,7 @@
 
 </div>
 
-**🎯 Quick Navigation**: [Installation](#-quick-start) | [Demo](#-quick-demo) | [Contributing](#-contributing) | [Documentation](docs/user-guide.md)
+**🎯 Quick Navigation**: [Installation](#-quick-start) | [Demo](#-quick-demo) | [Documentation](docs/user-guide.md)
 
 ## 🚀 Overview
 
