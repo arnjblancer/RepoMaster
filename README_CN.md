@@ -32,39 +32,20 @@ RepoMaster 是一个革命性的自主代理框架，专门设计用于探索、
 
 ### 🛠️ 安装
 
-**前置要求**：
-```bash
-python --version  # 需要Python 3.11+
-```
-
 **安装依赖**：
 ```bash
 git clone https://github.com/QuantaAlpha/RepoMaster.git
 cd RepoMaster
 pip install -r requirements.txt
-
 ```
 
 **配置API密钥**：
 创建 `configs/.env` 文件：
 ```bash
 # 设置默认API提供商 (openai, claude, deepseek, azure_openai)
-# 如果未设置，将按优先级顺序使用第一个可用的提供商
-DEFAULT_API_PROVIDER=openai
-
-# OpenAI配置
 OPENAI_API_KEY=your_openai_key
 OPENAI_MODEL=openai_model
 
-# Claude配置  
-ANTHROPIC_API_KEY=your_claude_key
-ANTHROPIC_MODEL=claude_model
-
-# 其他支持的提供商（可选）
-# DEEPSEEK_API_KEY=your_deepseek_key
-# GEMINI_API_KEY=your_gemini_key
-
-# 网络搜索API (深度搜索功能必需)
 Serper_API_KEY=your_serper_key          # 用于Google搜索结果
 JINA_API_KEY=your_jina_key              # 用于网页内容提取
 ```

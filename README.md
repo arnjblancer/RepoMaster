@@ -31,11 +31,6 @@ RepoMaster is a revolutionary autonomous agent framework specifically designed t
 
 ### 🛠️ Installation
 
-**Prerequisites**:
-```bash
-python --version  # Python 3.11+ required
-```
-
 **Install Dependencies**:
 ```bash
 git clone https://github.com/QuantaAlpha/RepoMaster.git
@@ -47,22 +42,9 @@ pip install -r requirements.txt
 Create `configs/.env` file:
 ```bash
 # Set the default API provider (openai, claude, deepseek, azure_openai)
-# If not set, will use the first available provider in priority order
-DEFAULT_API_PROVIDER=openai
-
-# OpenAI Configuration
 OPENAI_API_KEY=your_openai_key
 OPENAI_MODEL=openai_model
 
-# Claude Configuration  
-ANTHROPIC_API_KEY=your_claude_key
-ANTHROPIC_MODEL=claude_model
-
-# Other supported providers (optional)
-# DEEPSEEK_API_KEY=your_deepseek_key
-# GEMINI_API_KEY=your_gemini_key
-
-# Web Search APIs (Required for deep search functionality)
 Serper_API_KEY=your_serper_key          # For Google search results
 JINA_API_KEY=your_jina_key              # For web content extraction
 ```
@@ -212,7 +194,6 @@ If you find RepoMaster useful in your research, please cite our work:
 ```
 
 ---
-
 
 <div align="center">
 
