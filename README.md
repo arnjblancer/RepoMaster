@@ -2,25 +2,80 @@
 
   <img src="docs/assets/images/RepoMaster.png" alt="RepoMaster Logo" width="600"/>
 
-# RepoMaster: Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving
+<h1 align="center" style="color: #2196F3; font-size: 24px; font-weight: 600; margin: 20px 0; line-height: 1.4;">
+  🌟 RepoMaster: <span style="color: #555; font-weight: 400; font-size: 18px;"><em>Unlock 100M+ GitHub Repositories as AI Tools</em></span>
+</h1>
 
-  <p style="margin: 10px 0;">
-    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-red.svg" /></a>
-    <img src="https://img.shields.io/badge/Python-3.11+-blue.svg" />
-    <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+<p align="center" style="font-size: 16px; color: #666; margin: 10px 0; font-weight: 500;">
+  🚀 <em>Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving</em>
+</p>
+
+  <p style="margin: 20px 0;">
+    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-B31B1B.svg?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/License-MIT-00A98F.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/github/stars/QuantaAlpha/RepoMaster?style=for-the-badge&logo=github&color=FFD700" /></a>
   </p>
 
-  <p style="font-size: 15px; color: gray; margin-top: 4px;">
-    🌐 <a href="README.md">English</a> | <a href="README_CN.md">中文</a>
+  <!-- <p style="margin: 15px 0;">
+    <img src="https://img.shields.io/badge/🤖_AI_Agent-Framework-FF6B6B.svg?style=flat-square&logo=robot&logoColor=white" />
+    <img src="https://img.shields.io/badge/⚡_Autonomous-Execution-4ECDC4.svg?style=flat-square&logo=autohotkey&logoColor=white" />
+    <img src="https://img.shields.io/badge/🧠_Multi_Agent-System-45B7D1.svg?style=flat-square&logo=teamspeak&logoColor=white" />
+    <img src="https://img.shields.io/badge/🔍_Code-Understanding-96CEB4.svg?style=flat-square&logo=searchcode&logoColor=white" />
+  </p> -->
+
+  <p style="font-size: 16px; color: #666; margin: 15px 0; font-weight: 500;">
+    🌐 <a href="README.md" style="text-decoration: none; color: #0066cc;">English</a> | <a href="README_CN.md" style="text-decoration: none; color: #0066cc;">中文</a>
   </p>
 
 </div>
 
-**🎯 Quick Navigation**: [Installation](#-quick-start) | [Demo](#-quick-demo) | [Documentation](docs/user-guide.md)
+---
+
+<div align="center">
+
+### 🎯 Quick Navigation
+
+<table>
+<tr>
+<td align="center" width="25%">
+  <h3>🚀 <a href="#-quick-start">Quick Start</a></h3>
+  <p><em>Installation & Setup</em></p>
+</td>
+<td align="center" width="25%">
+  <h3>🎬 <a href="#-quick-demo">Live Demo</a></h3>
+  <p><em>See It in Action</em></p>
+</td>
+<td align="center" width="25%">
+  <h3>📖 <a href="docs/user-guide.md">Documentation</a></h3>
+  <p><em>Complete Guide</em></p>
+</td>
+<td align="center" width="25%">
+  <h3>🤝 <a href="#-contributing">Contributing</a></h3>
+  <p><em>Join Our Community</em></p>
+</td>
+</tr>
+</table>
+
+</div>
+
+---
 
 ## 🚀 Overview
 
-RepoMaster is a revolutionary autonomous agent framework specifically designed to explore, understand, and utilize GitHub repositories for solving complex real-world tasks. Unlike traditional approaches that generate code from scratch, RepoMaster treats open-source repositories on GitHub as composable tool modules, automatically leveraging these resources through intelligent search, hierarchical analysis, and autonomous exploration.
+<div align="center">
+  <h3>🎯 Say Goodbye to Code "Archaeology" - Embrace Intelligent Development</h3>
+  
+  <p style="font-size: 16px; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+    RepoMaster transforms how we approach complex coding tasks by treating <strong>GitHub repositories as intelligent tool modules</strong>, automatically discovering, understanding, and orchestrating open-source solutions through advanced AI-driven exploration.
+  </p>
+  
+  <p style="font-size: 16px; color: #2196F3; max-width: 800px; margin: 15px auto; line-height: 1.6; font-weight: 600;">
+    🔍 Smart Search → 🧠 Auto Understanding → ⚡ One-Click Execution → ✅ Perfect Delivery
+  </p>
+</div>
+
+<br/>
 
 
 <img src="docs/assets/images/performance_01.jpg" alt="RepoMaster performance" style="background-color: #ffffff; display: block; margin: 0 auto;" />
@@ -31,81 +86,122 @@ RepoMaster is a revolutionary autonomous agent framework specifically designed t
 
 ### 🛠️ Installation
 
-**Install Dependencies**:
+<details open>
+<summary><strong>📦 Dependencies Installation</strong></summary>
+
 ```bash
+# Clone the repository
 git clone https://github.com/QuantaAlpha/RepoMaster.git
+
+# Navigate to project directory
 cd RepoMaster
+
+# Install required dependencies
 pip install -r requirements.txt
 ```
 
-**Configure API Keys**:
-Create `configs/.env` file:
-```bash
-# Set the default API provider (openai, claude, deepseek, azure_openai)
-OPENAI_API_KEY=your_openai_key
-OPENAI_MODEL=openai_model
+</details>
 
-Serper_API_KEY=your_serper_key          # For Google search results
-JINA_API_KEY=your_jina_key              # For web content extraction
+<details open>
+<summary><strong>🔐 API Configuration</strong></summary>
+
+Create your `configs/.env` file:
+
+```bash
+# Primary AI Provider Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4-turbo-preview
+
+# External Service APIs
+Serper_API_KEY=your_serper_key          # Google search integration
+JINA_API_KEY=your_jina_key              # Web content extraction
+
+# Optional: Advanced Configuration
+# CLAUDE_API_KEY=your_claude_key        # Anthropic Claude support
+# DEEPSEEK_API_KEY=your_deepseek_key    # DeepSeek integration
 ```
 
-### 🚀 Run RepoMaster
+</details>
 
-**Frontend Mode (Web Interface)**:
+### 🚀 Quick Run
+
+<div align="center">
+
+| Mode | Description | Command | Access |
+|------|-------------|---------|--------|
+| **🖥️ Frontend** | Interactive Web UI | `python launcher.py --mode frontend` | http://localhost:8501 |
+| **⚡ Backend** | Unified API Mode | `python launcher.py --mode backend --backend-mode unified` | Terminal/API |
+
+</div>
+
+<details open>
+<summary><strong>💡 Quick Launch Commands</strong></summary>
+
 ```bash
+# Web Interface (Recommended for beginners)
+bash run.sh frontend
+
+# Backend Unified Mode (Recommended for advanced users)
+bash run.sh backend unified
+
+# Direct Python execution
 python launcher.py --mode frontend
-# Access: http://localhost:8501
-```
-
-
-**Backend Mode (Recommended)**:
-
-```bash
 python launcher.py --mode backend --backend-mode unified
 ```
 
-**Shell Script Shortcuts**:
-```bash
-bash run.sh frontend      # Frontend mode
-bash run.sh backend unified  # Backend unified mode
-```
+</details>
 
-> 📘 **For detailed configuration and advanced options, please refer to our [User Guide](docs/user-guide.md).**
+> 📘 **Need more configuration options?** Check our comprehensive [User Guide](docs/user-guide.md) for advanced setup, troubleshooting, and optimization tips.
 
 
 ---
 
 ## 🎯 Quick Demo
 
-Imagine describing a task in natural language, and RepoMaster automatically handles the rest: from finding the most suitable GitHub repository and understanding its complex code structure, to finally executing and completing the task! RepoMaster can handle everything from simple data extraction to complex AI model applications.
-
-**Simply describe your task in natural language, RepoMaster handles everything else!**
+<div align="center">
+  <h3>💬 Natural Language → 🤖 Autonomous Execution → ✨ Real Results</h3>
+  <p style="font-size: 16px; color: #666; margin: 20px 0; max-width: 700px;">
+    Simply describe your task in natural language, and watch RepoMaster automatically discover, understand, and orchestrate the perfect GitHub solutions to bring your ideas to life.
+  </p>
+</div>
 
 | Task Description | RepoMaster Action | Result |
 |------------------|-------------------|---------|
 | *"Help me scrape product prices from this webpage"* | 🔍 Find scraping tools → 🔧 Auto-configure → ✅ Extract data | Structured CSV output |
 | *"Transform photo into Van Gogh style"* | 🔍 Find style transfer repos → 🎨 Process images → ✅ Generate art | Artistic masterpiece |
 
-### 🎨 Neural Style Transfer Demo
+<div align="center" style="background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); border-radius: 15px; padding: 20px; margin: 20px auto; max-width: 700px;">
+  <p style="color: white; margin: 5px 0; font-size: 16px;">From <strong>"Code Porter"</strong> → To <strong>"AI Orchestrator"</strong></p>
+</div>
 
-<table>
+### 🎨 Neural Style Transfer Case Study
+
+<div align="center">
+
+<table style="border: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 20px; margin: 20px 0;">
 <tr>
-<td align="center"><b>Original Image</b></td>
-<td align="center"><b>Style Reference</b></td>
-<td align="center"><b>Transfer Result</b></td>
-</tr>
-<tr>
-<td><img src="docs/assets/images/origin.jpg" width="200px" /></td>
-<td><img src="docs/assets/images/style.jpg" width="200px" /></td>
-<td><img src="docs/assets/images/transfer.jpg" width="200px" /></td>
+<td align="center" width="33%" style="padding: 10px;">
+  <h4 style="color: white; margin-bottom: 10px;">📷 Original Image</h4>
+  <div style="background: white; border-radius: 10px; padding: 5px;">
+    <img src="docs/assets/images/origin.jpg" width="180px" style="border-radius: 5px;" />
+  </div>
+</td>
+<td align="center" width="33%" style="padding: 10px;">
+  <h4 style="color: white; margin-bottom: 10px;">🎨 Style Reference</h4>
+  <div style="background: white; border-radius: 10px; padding: 5px;">
+    <img src="docs/assets/images/style.jpg" width="180px" style="border-radius: 5px;" />
+  </div>
+</td>
+<td align="center" width="33%" style="padding: 10px;">
+  <h4 style="color: white; margin-bottom: 10px;">✨ Final Result</h4>
+  <div style="background: white; border-radius: 10px; padding: 5px;">
+    <img src="docs/assets/images/transfer.jpg" width="180px" style="border-radius: 5px;" />
+  </div>
+</td>
 </tr>
 </table>
 
-**Automated Workflow**:
-1. 🔍 **Smart Search**: Find style transfer repositories on GitHub
-2. 🏗️ **Structure Analysis**: Analyze code structure and pipelines
-3. 🔧 **Autonomous Execution**: Configure environment and process images
-4. ✅ **Task Completion**: Generate results without human intervention
+</div>
 
 ### 🎬 Complete Execution Demo | [📺 YouTube Demo](https://www.youtube.com/watch?v=Kva2wVhBkDU)
 
@@ -123,15 +219,65 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
+<div align="center">
+  <h3>🌟 Join Our Mission to Revolutionize Code Intelligence</h3>
+  <p style="color: #666; margin: 15px 0;">
+    We believe in the power of community-driven innovation. Your contributions help make RepoMaster smarter, faster, and more capable.
+  </p>
+</div>
 
-### Development Setup
+### 🚀 Ways to Contribute
+
+<table align="center">
+<tr>
+<td align="center" width="25%">
+  <h4>🐛 Bug Reports</h4>
+  <p>Help us identify and fix issues</p>
+  <a href="https://github.com/QuantaAlpha/RepoMaster/issues">Report Bugs</a>
+</td>
+<td align="center" width="25%">
+  <h4>💡 Feature Requests</h4>
+  <p>Suggest new capabilities</p>
+  <a href="https://github.com/QuantaAlpha/RepoMaster/discussions">Share Ideas</a>
+</td>
+<td align="center" width="25%">
+  <h4>📖 Documentation</h4>
+  <p>Improve guides and examples</p>
+  <a href="docs/">View Docs</a>
+</td>
+<td align="center" width="25%">
+  <h4>💻 Code Contributions</h4>
+  <p>Add features and improvements</p>
+  <a href="#development-setup">Get Started</a>
+</td>
+</tr>
+</table>
+
+### 🛠️ Development Setup
+
+<details open>
+<summary><strong>Quick Developer Environment Setup</strong></summary>
+
 ```bash
-git clone https://github.com/QuantaAlpha/RepoMaster.git
+# Fork and clone the repository
+git clone https://github.com/your-username/RepoMaster.git
 cd RepoMaster
+
+# Install development dependencies
 pip install -e ".[dev]"
+
+# Set up pre-commit hooks for code quality
 pre-commit install
+
+# Run tests to ensure everything works
+pytest tests/
+
+# Start developing! 🚀
 ```
+
+</details>
+
+> 📋 **New to open source?** Check our [Contributing Guidelines](CONTRIBUTING.md) for detailed instructions and best practices.
 
 ---
 
@@ -162,9 +308,9 @@ Special thanks to:
 
 ## 🌐 About QuantaAlpha
 
-- QuantaAlpha was founded in **April 2025** by a team of professors, postdocs, PhDs, and master’s students from **Tsinghua University, Peking University, CAS, CMU, HKUST**, and more.  
+- QuantaAlpha was founded in **April 2025** by a team of professors, postdocs, PhDs, and master's students from **Tsinghua University, Peking University, CAS, CMU, HKUST**, and more.  
 
-🌟 Our mission is to explore the **“quantum”** of intelligence and pioneer the **“alpha”** frontier of agent research — from **CodeAgents** to **self-evolving intelligence**, and further to **financial and cross-domain specialized agents**, we are committed to redefining the boundaries of AI. 
+🌟 Our mission is to explore the **"quantum"** of intelligence and pioneer the **"alpha"** frontier of agent research — from **CodeAgents** to **self-evolving intelligence**, and further to **financial and cross-domain specialized agents**, we are committed to redefining the boundaries of AI. 
 
 ✨ In **2025**, we will continue to produce high-quality research in the following directions:  
 - **CodeAgent**: End-to-end autonomous execution of real-world tasks  
