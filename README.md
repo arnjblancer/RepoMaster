@@ -35,7 +35,7 @@
 
 [![Quick Start](https://img.shields.io/badge/🚀_Quick-Start-4CAF50?style=for-the-badge)](#-quick-start)
 [![Live Demo](https://img.shields.io/badge/🎬_Live-Demo-FF9800?style=for-the-badge)](#-quick-demo)
-[![Documentation](https://img.shields.io/badge/📖_Complete-Guide-2196F3?style=for-the-badge)](docs/user-guide.md)
+[![Documentation](https://img.shields.io/badge/📖_Complete-Guide-2196F3?style=for-the-badge)](user-guide.md)
 
 </div>
 </div>
@@ -134,7 +134,7 @@ python launcher.py --mode backend --backend-mode unified
 
 </details>
 
-> 📘 **Need more configuration options?** Check our comprehensive [User Guide](docs/user-guide.md) for advanced setup, troubleshooting, and optimization tips.
+> 📘 **Need more configuration options?** Check our comprehensive [User Guide](user-guide.md) for advanced setup, troubleshooting, and optimization tips.
 
 
 ---
@@ -196,7 +196,7 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 </div>
 
-**For advanced usage, configuration options, and troubleshooting, see our [User Guide](docs/user-guide.md).**
+**For advanced usage, configuration options, and troubleshooting, see our [User Guide](user-guide.md).**
 
 ---
 

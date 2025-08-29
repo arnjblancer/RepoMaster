@@ -451,7 +451,7 @@ def show_available_modes():
 
 📖 Get complete help: python launcher.py --help
 
-💡 First time use? Reference: docs/user-guide.md
+💡 First time use? Reference: user-guide.md
 """)
 
 def main():

@@ -36,7 +36,7 @@
 
 [![快速开始](https://img.shields.io/badge/🚀_快速-开始-4CAF50?style=for-the-badge)](#-快速开始)
 [![实时演示](https://img.shields.io/badge/🎬_实时-演示-FF9800?style=for-the-badge)](#-快速演示)
-[![使用文档](https://img.shields.io/badge/📖_使用-文档-2196F3?style=for-the-badge)](docs/user-guide.md)
+[![使用文档](https://img.shields.io/badge/📖_使用-文档-2196F3?style=for-the-badge)](user-guide.md)
 
 </div>
 
@@ -133,7 +133,7 @@ python launcher.py --mode backend --backend-mode unified
 
 </details>
 
-> 📘 **需要更多配置选项？** 查看我们的综合[用户指南](docs/user-guide.md)获取高级设置、故障排除和优化技巧。
+> 📘 **需要更多配置选项？** 查看我们的综合[用户指南](user-guide.md)获取高级设置、故障排除和优化技巧。
 
 
 ---
@@ -195,7 +195,7 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 </div>
 
-**更多高级用法、配置选项和故障排除，请参阅我们的[用户指南](docs/user-guide.md).**
+**更多高级用法、配置选项和故障排除，请参阅我们的[用户指南](user-guide.md).**
 
 ---
 
