@@ -3,11 +3,11 @@
   <img src="docs/assets/images/RepoMaster.png" alt="RepoMaster Logo" width="600"/>
 
 <h1 align="center" style="color: #2196F3; font-size: 24px; font-weight: 600; margin: 20px 0; line-height: 1.4;">
-  🌟 RepoMaster: <span style="color: #555; font-weight: 400; font-size: 18px;"><em>Unlock 100M+ GitHub Repositories as AI Tools</em></span>
+  🌟 RepoMaster: <span style="color: #555; font-weight: 400; font-size: 18px;"><em>Make 100M+ GitHub Repositories Work for You</em></span>
 </h1>
 
 <p align="center" style="font-size: 16px; color: #666; margin: 10px 0; font-weight: 500;">
-  🚀 <em>Autonomous Exploration and Understanding of GitHub Repositories for Complex Task Solving</em>
+  🚀 <em>Turn GitHub Repositories into Your Personal AI Toolbox</em>
 </p>
 
   <p style="margin: 20px 0;">
@@ -32,31 +32,12 @@
 
 ---
 
-<div align="center">
 
-### 🎯 Quick Navigation
+[![Quick Start](https://img.shields.io/badge/🚀_Quick-Start-4CAF50?style=for-the-badge)](#-quick-start)
+[![Live Demo](https://img.shields.io/badge/🎬_Live-Demo-FF9800?style=for-the-badge)](#-quick-demo)
+[![Documentation](https://img.shields.io/badge/📖_Complete-Guide-2196F3?style=for-the-badge)](docs/user-guide.md)
 
-<table>
-<tr>
-<td align="center" width="25%">
-  <h3>🚀 <a href="#-quick-start">Quick Start</a></h3>
-  <p><em>Installation & Setup</em></p>
-</td>
-<td align="center" width="25%">
-  <h3>🎬 <a href="#-quick-demo">Live Demo</a></h3>
-  <p><em>See It in Action</em></p>
-</td>
-<td align="center" width="25%">
-  <h3>📖 <a href="docs/user-guide.md">Documentation</a></h3>
-  <p><em>Complete Guide</em></p>
-</td>
-<td align="center" width="25%">
-  <h3>🤝 <a href="#-contributing">Contributing</a></h3>
-  <p><em>Join Our Community</em></p>
-</td>
-</tr>
-</table>
-
+</div>
 </div>
 
 ---
@@ -64,14 +45,14 @@
 ## 🚀 Overview
 
 <div align="center">
-  <h3>🎯 Say Goodbye to Code "Archaeology" - Embrace Intelligent Development</h3>
+  <h3>🎯 Discover · Understand · Execute - Make Open Source Work for You</h3>
   
   <p style="font-size: 16px; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-    RepoMaster transforms how we approach complex coding tasks by treating <strong>GitHub repositories as intelligent tool modules</strong>, automatically discovering, understanding, and orchestrating open-source solutions through advanced AI-driven exploration.
+    RepoMaster transforms how you solve coding tasks by <strong>automatically finding the right GitHub tools</strong> and making them work together seamlessly. Just describe what you want, and watch as open source repositories become your intelligent assistants.
   </p>
   
   <p style="font-size: 16px; color: #2196F3; max-width: 800px; margin: 15px auto; line-height: 1.6; font-weight: 600;">
-    🔍 Smart Search → 🧠 Auto Understanding → ⚡ One-Click Execution → ✅ Perfect Delivery
+    💬 Describe Task → 🧠 AI Analysis → 🔍 Auto Discovery → ⚡ Smart Execution → ✅ Perfect Results
   </p>
 </div>
 
@@ -81,6 +62,8 @@
 <img src="docs/assets/images/performance_01.jpg" alt="RepoMaster performance" style="background-color: #ffffff; display: block; margin: 0 auto;" />
 
 ---
+
+
 
 ## 🚀 Quick Start
 
@@ -161,7 +144,7 @@ python launcher.py --mode backend --backend-mode unified
 <div align="center">
   <h3>💬 Natural Language → 🤖 Autonomous Execution → ✨ Real Results</h3>
   <p style="font-size: 16px; color: #666; margin: 20px 0; max-width: 700px;">
-    Simply describe your task in natural language, and watch RepoMaster automatically discover, understand, and orchestrate the perfect GitHub solutions to bring your ideas to life.
+    Simply describe your task in natural language. RepoMaster's AI automatically analyzes your request, intelligently routes to optimal solution paths, and orchestrates the perfect GitHub tools to bring your ideas to life.
   </p>
 </div>
 
@@ -171,7 +154,7 @@ python launcher.py --mode backend --backend-mode unified
 | *"Transform photo into Van Gogh style"* | 🔍 Find style transfer repos → 🎨 Process images → ✅ Generate art | Artistic masterpiece |
 
 <div align="center" style="background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); border-radius: 15px; padding: 20px; margin: 20px auto; max-width: 700px;">
-  <p style="color: white; margin: 5px 0; font-size: 16px;">From <strong>"Code Porter"</strong> → To <strong>"AI Orchestrator"</strong></p>
+  <p style="color: white; margin: 5px 0; font-size: 16px;">From <strong>"Writing Code from Scratch"</strong> → To <strong>"Making Open Source Work"</strong></p>
 </div>
 
 ### 🎨 Neural Style Transfer Case Study

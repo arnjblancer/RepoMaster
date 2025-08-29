@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-RepoMaster Unified Launcher
+RepoMaster Multi-Agent System Launcher
 
-This file is the main startup entry point for RepoMaster, supporting multiple running modes:
-1. frontend: Frontend Streamlit interface mode
-2. backend: Backend service mode
-   - deepsearch: Deep search mode
-   - general_assistant: General programming assistant mode  
-   - repository_agent: Repository task processing mode
+This file is the main startup entry point for RepoMaster's Multi-Agent Intelligence System, 
+supporting multiple access interfaces:
+1. frontend: Interactive Multi-Agent Dashboard
+2. backend: Multi-Agent Service Interface
+   - unified: Unified Multi-Agent Interface (Recommended - automatic agent orchestration)
+   - deepsearch: Direct Deep Search Agent access
+   - general_assistant: Direct Programming Assistant Agent access  
+   - repository_agent: Direct Repository Exploration Agent access
 
 Usage:
-    python launcher.py --mode frontend
-    python launcher.py --mode backend --backend-mode deepsearch
-    python launcher.py --mode backend --backend-mode general_assistant
-    python launcher.py --mode backend --backend-mode repository_agent
+    python launcher.py --mode frontend                              # Multi-Agent Dashboard
+    python launcher.py --mode backend --backend-mode unified        # Unified Multi-Agent Interface
+    python launcher.py --mode backend --backend-mode deepsearch     # Deep Search Agent
+    python launcher.py --mode backend --backend-mode general_assistant  # Programming Assistant Agent
+    python launcher.py --mode backend --backend-mode repository_agent   # Repository Exploration Agent
     python launcher.py --help  # View all options
 """
 
@@ -116,7 +119,7 @@ def run_backend_mode(config_manager: ModeConfigManager):
         raise ValueError(f"Unsupported backend mode: {config.backend_mode}")
 
 def run_deepsearch_mode(config_manager: ModeConfigManager):
-    """Run deep search mode"""
+    """Run Deep Search Agent (direct access to deep search capabilities)"""
     
     # Import deep search agent and conversation manager
     from src.services.agents.deep_search_agent import AutogenDeepSearchAgent
@@ -147,7 +150,7 @@ def run_deepsearch_mode(config_manager: ModeConfigManager):
         "• Enter 'quit' to exit, 'history'/'clear' to view/clear chat history"
     ]
     
-    print_mode_welcome("Deep Search Engine Ready!", execution_config['work_dir'], features, instructions)
+    print_mode_welcome("🔍 Deep Search Agent Ready!", execution_config['work_dir'], features, instructions)
     
     try:
         while True:
@@ -176,10 +179,10 @@ def run_deepsearch_mode(config_manager: ModeConfigManager):
             print(f"\n📋 Search results:\n{result}\n")
             
     except KeyboardInterrupt:
-        print("\n👋 Deep search service stopped")
+        print("\n👋 Deep Search Agent service stopped")
 
 def run_general_assistant_mode(config_manager: ModeConfigManager):
-    """Run general programming assistant mode"""
+    """Run Programming Assistant Agent (direct access to programming assistance capabilities)"""
     
     # Import RepoMaster agent and conversation manager
     from src.core.agent_scheduler import RepoMasterAgent
@@ -245,10 +248,10 @@ def run_general_assistant_mode(config_manager: ModeConfigManager):
             print(f"\n📋 Task result:\n{result}\n")
             
     except KeyboardInterrupt:
-        print("\n👋 General programming assistant service stopped")
+        print("\n👋 Programming Assistant Agent service stopped")
 
 def run_repository_agent_mode(config_manager: ModeConfigManager):
-    """Run repository task mode"""
+    """Run Repository Exploration Agent (direct access to repository exploration and task execution)"""
     
     # Import RepoMaster agent and conversation manager
     from src.core.agent_scheduler import RepoMasterAgent
@@ -331,10 +334,10 @@ def run_repository_agent_mode(config_manager: ModeConfigManager):
             print(f"\n📋 Task result:\n{result}\n")
             
     except KeyboardInterrupt:
-        print("\n👋 Repository task service stopped")
+        print("\n👋 Repository Exploration Agent service stopped")
 
 def run_unified_mode(config_manager: ModeConfigManager):
-    """Run unified general mode"""
+    """Run Unified Multi-Agent Interface (automatic agent orchestration and collaboration)"""
     
     # Import RepoMaster agent and conversation manager
     from src.core.agent_scheduler import RepoMasterAgent
@@ -396,7 +399,7 @@ def run_unified_mode(config_manager: ModeConfigManager):
                 print("   💡 Please try to describe your task requirements in more detail")
             
     except KeyboardInterrupt:
-        print("\n👋 Unified general assistant service stopped")
+        print("\n👋 Multi-Agent system service stopped")
 
 def check_api_configuration() -> bool:
     """Check API configuration status"""
@@ -413,28 +416,31 @@ def check_api_configuration() -> bool:
         return False
 
 def show_available_modes():
-    """Display available running modes"""
+    """Display available Multi-Agent system interfaces"""
     print("""
-🚀 RepoMaster Available Running Modes:
+🤖 RepoMaster Multi-Agent System Access Interfaces:
 
-1. frontend (Frontend Mode)
-   - Launch Streamlit Web interface
-   - Support interactive chat and file management
+1. Multi-Agent Dashboard (Visual Interface)
+   - Interactive web interface with agent collaboration visualization
+   - Real-time multi-agent coordination display
    - Command: python launcher.py --mode frontend
 
-2. backend (Backend Mode)
-   - unified: Unified General Mode ⭐ Recommended
+2. Multi-Agent Service Interface (Backend)
+   - unified: Unified Multi-Agent Interface ⭐ Recommended
      python launcher.py --mode backend --backend-mode unified
-     Contains all features: deep search, programming assistant, repository processing, intelligent switching
+     🧠 Intelligent agent orchestration: Deep Search + Programming Assistant + Repository Exploration agents
      
-   - deepsearch: Deep Search Mode
+   - deepsearch: Deep Search Agent (Direct Access)
      python launcher.py --mode backend --backend-mode deepsearch
+     🔍 Advanced web search, data analysis, and information synthesis
      
-   - general_assistant: General Programming Assistant Mode
+   - general_assistant: Programming Assistant Agent (Direct Access)
      python launcher.py --mode backend --backend-mode general_assistant
+     💻 Code generation, algorithm implementation, and debugging assistance
      
-   - repository_agent: Repository Task Processing Mode
+   - repository_agent: Repository Exploration Agent (Direct Access)
      python launcher.py --mode backend --backend-mode repository_agent
+     🏗️ Repository exploration, task execution, and system orchestration
 
 🔧 Advanced Options:
    --api-type: Specify API type (basic, openai, claude, deepseek, etc.)
@@ -445,7 +451,7 @@ def show_available_modes():
 
 📖 Get complete help: python launcher.py --help
 
-💡 First time use? Reference: CONFIGURATION_GUIDE.md
+💡 First time use? Reference: docs/user-guide.md
 """)
 
 def main():

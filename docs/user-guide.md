@@ -5,6 +5,7 @@ This comprehensive guide provides everything you need to use RepoMaster effectiv
 ## 📋 Table of Contents
 
 - [🚀 Getting Started](#-getting-started)
+- [🧠 Intelligent Task Processing Engine](#-intelligent-task-processing-engine)
 - [💻 Usage Modes](#-usage-modes)
 - [🔧 Advanced Usage](#-advanced-usage)
 - [📝 Use Cases](#-use-cases)
@@ -55,41 +56,114 @@ JINA_API_KEY=your_jina_key              # For web content extraction
 
 ---
 
-## 💻 Usage Modes
+## 🧠 Multi-Agent Intelligence System
 
-### Frontend Mode (Web Interface)
+<div align="center">
 
-Launch the interactive web interface for multi-user access and visual interaction:
+### 🤖 One Interface, All GitHub Resources
+
+> **Simply describe your task in natural language.** RepoMaster automatically finds the right GitHub tools and makes them work together to solve your task.
+
+```bash
+python launcher.py --mode backend --backend-mode unified
+```
+
+</div>
+
+### 🎯 Intelligent Multi-Agent Orchestration
+
+RepoMaster features a sophisticated **Multi-Agent System** where specialized AI agents work in harmony to deliver optimal solutions. Our intelligent dispatcher automatically routes tasks to the most suitable agent combination:
+
+<div align="center">
+
+| 🔍 **Deep Search Agent** | 💻 **Programming Assistant Agent** | 🏗️ **Repository Exploration Agent** |
+|:---:|:---:|:---:|
+| **Advanced Search & Web Analysis** | **Code Generation & Programming** | **Repository Understanding & Task Execution** |
+| • Advanced web research & data retrieval | • Intelligent code generation | • Autonomous code exploration |
+| • Information synthesis & analysis | • Algorithm implementation | • Complex task orchestration |
+| • Query optimization | • Debug & code optimization | • Multi-repo coordination |
+
+</div>
+
+#### 🚀 How Multi-Agent System Works
+
+```
+👤 User Task Input
+     ↓
+🧠 AI Intelligent Dispatcher
+     ↓
+🔀 Task Analysis & Agent Selection
+     ↓
+┌─────────────────┬─────────────────┬─────────────────┐
+│🔍 Deep Search &  │💻 Programming    │🏗️ Repository     │
+│ Web Research     │ Assistant        │ Exploration     │
+│                 │                 │                 │
+│ • Web search     │ • Code generation│ • Repo analysis  │
+│ • Data synthesis │ • Algorithm impl │ • Task execution │
+│ • Context build  │ • Debug support  │ • Multi-repo ops │
+└─────────────────┴─────────────────┴─────────────────┘
+     ↓
+🎯 Intelligent Result Orchestration
+     ↓
+✅ Perfect Solution Delivered
+```
+
+> **✨ Key Innovation:** No manual agent selection required - our AI dispatcher intelligently combines agents based on task complexity and requirements, ensuring optimal performance for every request.
+
+---
+
+## 💻 Multi-Agent Access Interfaces
+
+### 🤖 Unified Multi-Agent Interface (Recommended)
+
+The primary way to use RepoMaster - one command, all GitHub resources at your service:
+
+```bash
+python launcher.py --mode backend --backend-mode unified
+```
+
+**Why Unified Multi-Agent Interface?**
+- 🧠 **AI-Powered Task Analysis**: Automatically understands your intent
+- 🤝 **Intelligent Agent Collaboration**: Seamlessly coordinates multiple agents as needed
+- 🎯 **Context-Aware Routing**: Dynamically selects optimal agent combinations
+- ⚡ **Zero Configuration**: No manual agent selection required
+
+### 🌐 Web Interface (Visual Multi-Agent Dashboard)
+
+Launch the interactive web interface for visual multi-agent interaction:
 
 ```bash
 python launcher.py --mode frontend
 # Access: http://localhost:8501
 ```
 
-**Features**:
-- 🌐 Interactive web chat interface
-- 📁 File upload and management
+**Multi-Agent Dashboard Features**:
+- 🌐 Interactive multi-agent chat interface
+- 📁 File upload and management across agents
 - 👥 Multi-user session support
-- 📊 Visual task progress tracking
+- 📊 Real-time agent collaboration visualization
 
-### Backend Mode
+### 🔧 Direct Agent Access (Advanced)
 
-**Unified Assistant** (Recommended):
+For developers who want direct access to individual agents:
+
+<details>
+<summary><strong>Individual Agent Interfaces (Click to expand)</strong></summary>
+
 ```bash
-python launcher.py --mode backend --backend-mode unified
-```
-
-**Specialized Modes**:
-```bash
-# Deep Search & Web Research
+# Direct access to Deep Search Agent
 python launcher.py --mode backend --backend-mode deepsearch
 
-# General Programming Assistant  
+# Direct access to Programming Assistant Agent
 python launcher.py --mode backend --backend-mode general_assistant
 
-# Repository-Specific Tasks
+# Direct access to Repository Exploration Agent
 python launcher.py --mode backend --backend-mode repository_agent
 ```
+
+> 💡 **Note**: These direct agent interfaces are primarily for development, testing, and specialized workflows. For optimal performance and seamless agent collaboration, the unified multi-agent interface is recommended for production use.
+
+</details>
 
 ### Shell Script Shortcuts
 
