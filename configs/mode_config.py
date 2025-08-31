@@ -179,7 +179,7 @@ class ModeConfigManager:
         
         # Frontend-specific parameters
         frontend_params = base_params + [
-            'streamlit_port', 'streamlit_host'
+            'streamlit_port', 'streamlit_host', 'max_upload_size'
         ]
         
         # Backend-specific parameters  
@@ -269,6 +269,13 @@ def create_argument_parser() -> argparse.ArgumentParser:
         '--streamlit-host',
         default='localhost',
         help='Streamlit host address (default: localhost)'
+    )
+    
+    parser.add_argument(
+        '--max-upload-size',
+        type=int,
+        default=200,
+        help='Maximum file upload size in MB (default: 200)'
     )
     
     # Debug and logging

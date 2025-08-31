@@ -57,28 +57,60 @@ def setup_environment():
     
     # Load environment variables
     from dotenv import load_dotenv
-    env_files = [
-        current_dir / "configs" / ".env",
-    ]
     
-    env_loaded = False
-    for env_file in env_files:
-        if env_file.exists():
-            load_dotenv(env_file)
-            if not os.environ.get('SERPER_API_KEY'):
-                print("⚠️  SERPER_API_KEY not found, please check .env file")
-                return False
-            if not os.environ.get('JINA_API_KEY'):
-                print("⚠️  JINA_API_KEY not found, please check .env file")
-                return False
-            # Will be displayed later with beautiful formatting
-            env_loaded = True
-            break
+    # Check for configuration files
+    env_file = current_dir / "configs" / ".env"
+    env_example_file = current_dir / "configs" / "env.example"
     
-    if not env_loaded:
-        print("⚠️  .env file not found, will use system environment variables")
+    # If .env doesn't exist but env.example does, provide helpful guidance
+    if not env_file.exists() and env_example_file.exists():
+        print("⚠️  Configuration file not found!")
+        print(f"📝 Please copy the example configuration file:")
+        print(f"   cp {env_example_file} {env_file}")
+        print(f"   Then edit {env_file} with your API keys")
+        print("💡 See README.md or user-guide.md for detailed setup instructions")
+        return False
+    
+    # Load environment variables if .env exists
+    if env_file.exists():
+        load_dotenv(env_file)
         
-    return env_loaded
+        # Check for required API keys
+        missing_keys = []
+        required_keys = ['SERPER_API_KEY', 'JINA_API_KEY']
+        
+        for key in required_keys:
+            if not os.environ.get(key):
+                missing_keys.append(key)
+        
+        if missing_keys:
+            print(f"⚠️  Missing required API keys in .env file: {', '.join(missing_keys)}")
+            print(f"📝 Please edit {env_file} and add the missing keys")
+            print("💡 See README.md or user-guide.md for API key setup instructions")
+            return False
+            
+        return True
+    
+    # Fallback to system environment variables
+    print("⚠️  .env file not found, checking system environment variables...")
+    missing_keys = []
+    required_keys = ['SERPER_API_KEY', 'JINA_API_KEY']
+    
+    for key in required_keys:
+        if not os.environ.get(key):
+            missing_keys.append(key)
+    
+    if missing_keys:
+        print(f"❌ Missing required environment variables: {', '.join(missing_keys)}")
+        if env_example_file.exists():
+            print(f"📝 Please create configuration file:")
+            print(f"   cp {env_example_file} {env_file}")
+            print(f"   Then edit {env_file} with your API keys")
+        print("💡 See README.md or user-guide.md for setup instructions")
+        return False
+        
+    print("✅ Using system environment variables")
+    return True
 
 def run_frontend_mode(config_manager: ModeConfigManager):
     """Run frontend mode"""
@@ -89,7 +121,8 @@ def run_frontend_mode(config_manager: ModeConfigManager):
         "src/frontend/app_autogen_enhanced.py",
         "--server.port", str(config.streamlit_port),
         "--server.address", config.streamlit_host,
-        "--server.fileWatcherType", config.file_watcher_type
+        "--server.fileWatcherType", config.file_watcher_type,
+        "--server.maxUploadSize", str(config.max_upload_size)
     ]
     
     print(f"\n🌐 Access URL: http://{config.streamlit_host}:{config.streamlit_port}")

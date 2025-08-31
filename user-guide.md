@@ -28,31 +28,42 @@ pip install -r requirements.txt
 ```
 
 ### Basic Configuration
-Create `configs/.env` file with your API keys:
+
+Copy the example configuration file and customize it with your API keys:
+
+```bash
+cp configs/env.example configs/.env
+# Edit the configuration file with your API keys
+nano configs/.env  # or use your preferred editor
+```
+
+**Configuration Template** (from `configs/env.example`):
 ```bash
 # Set the default API provider (openai, claude, deepseek, azure_openai)
 DEFAULT_API_PROVIDER=openai
 
 # OpenAI Configuration
 OPENAI_API_KEY=your_openai_key
-OPENAI_MODEL=openai_model
+OPENAI_MODEL=gpt-5
 
 # Claude Configuration  
 ANTHROPIC_API_KEY=your_claude_key
-ANTHROPIC_MODEL=claude_model
+ANTHROPIC_MODEL=claude-4-sonnet
 
 # DeepSeek Configuration
 DEEPSEEK_API_KEY=your_deepseek_key
-DEEPSEEK_MODEL=deepseek_model
+DEEPSEEK_MODEL=deepseek-v3
 
 # Google Gemini Configuration
 GEMINI_API_KEY=your_gemini_key
-GEMINI_MODEL=gemini_model
+GEMINI_MODEL=gemini-2.5-pro
 
 # Web Search APIs (Required for deep search functionality)
-Serper_API_KEY=your_serper_key          # For Google search results
-JINA_API_KEY=your_jina_key              # For web content extraction
+SERPER_API_KEY=your_serper_key          # For Google search results - Get API key at: https://serper.dev/login
+JINA_API_KEY=your_jina_key              # For web content extraction - Get API key at: https://jina.ai/
 ```
+
+💡 **Note**: The `configs/env.example` file contains the complete configuration template with all available options and detailed comments.
 
 ---
 
@@ -135,11 +146,14 @@ Launch the interactive web interface for visual multi-agent interaction:
 ```bash
 python launcher.py --mode frontend
 # Access: http://localhost:8501
+
+# Configure file upload size limit (default: 200MB)
+python launcher.py --mode frontend --max-upload-size 500  # Set to 500MB
 ```
 
 **Multi-Agent Dashboard Features**:
 - 🌐 Interactive multi-agent chat interface
-- 📁 File upload and management across agents
+- 📁 File upload and management across agents (configurable size limit)
 - 👥 Multi-user session support
 - 📊 Real-time agent collaboration visualization
 
@@ -181,6 +195,33 @@ bash run.sh backend repository_agent
 ---
 
 ## 🔧 Advanced Usage
+
+### Command Line Configuration Options
+
+RepoMaster supports various configuration options to customize your experience:
+
+```bash
+# Frontend configuration options
+python launcher.py --mode frontend \
+  --streamlit-port 8502 \              # Custom port (default: 8501)
+  --streamlit-host 0.0.0.0 \           # Custom host (default: localhost)
+  --max-upload-size 1000 \             # File upload limit in MB (default: 200)
+  --log-level DEBUG                    # Logging level (default: INFO)
+
+# Backend configuration options  
+python launcher.py --mode backend --backend-mode unified \
+  --api-type openai \                  # API provider (default: basic)
+  --temperature 0.1 \                  # Model temperature (default: 0.1)
+  --work-dir /custom/path \            # Working directory (default: coding)
+  --timeout 300 \                      # Request timeout in seconds (default: 120)
+  --max-tokens 8000                    # Maximum token count (default: 4000)
+```
+
+**File Upload Size Configuration**:
+- Default limit: 200MB
+- Range: 1MB - 2000MB (2GB)
+- Affects web interface file uploads
+- Example: `--max-upload-size 500` sets limit to 500MB
 
 ### Basic Programming Interface
 

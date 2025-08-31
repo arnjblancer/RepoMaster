@@ -11,10 +11,11 @@
 </p>
 
   <p style="margin: 20px 0;">
-    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-B31B1B.svg?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/badge/License-MIT-00A98F.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/github/stars/QuantaAlpha/RepoMaster?style=for-the-badge&logo=github&color=FFD700" /></a>
+    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-B31B1B.svg?style=flat-square&logo=arxiv&logoColor=white" /></a>
+    <a href="https://github.com/openai/mle-bench"><img src="https://img.shields.io/badge/Benchmark-MLE--Bench-FF6B35.svg?style=flat-square&logo=openai&logoColor=white" /></a>
+    <a href="https://github.com/QuantaAlpha/GitTaskBench"><img src="https://img.shields.io/badge/Benchmark-GitTaskBench-4A90E2.svg?style=flat-square&logo=github&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/License-MIT-00A98F.svg?style=flat-square&logo=opensourceinitiative&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/github/stars/QuantaAlpha/RepoMaster?style=flat-square&logo=github&color=FFD700" /></a>
   </p>
 
   <!-- <p style="margin: 15px 0;">
@@ -32,12 +33,16 @@
 
 ---
 
-<div align="center">
-
-[![快速开始](https://img.shields.io/badge/🚀_快速-开始-4CAF50?style=for-the-badge)](#-快速开始)
-[![实时演示](https://img.shields.io/badge/🎬_实时-演示-FF9800?style=for-the-badge)](#-快速演示)
-[![使用文档](https://img.shields.io/badge/📖_使用-文档-2196F3?style=for-the-badge)](user-guide.md)
-
+<div align="center" style="margin: 30px 0;">
+  <a href="#-快速开始" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/🚀_快速开始-立即开始-4CAF50?style=for-the-badge&logo=rocket&logoColor=white&labelColor=2E7D32" alt="快速开始" />
+  </a>
+  <a href="#-快速演示" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/🎬_实时演示-立即观看-FF9800?style=for-the-badge&logo=play&logoColor=white&labelColor=F57C00" alt="实时演示" />
+  </a>
+  <a href="user-guide.md" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/📖_使用文档-完整指南-2196F3?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=1565C0" alt="使用文档" />
+  </a>
 </div>
 
 ---
@@ -64,76 +69,67 @@
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
-### 🛠️ 安装
-
-<details open>
-<summary><strong>📦 依赖安装</strong></summary>
+### 安装
 
 ```bash
-# 克隆仓库
 git clone https://github.com/QuantaAlpha/RepoMaster.git
-
-# 进入项目目录
 cd RepoMaster
-
-# 安装所需依赖
 pip install -r requirements.txt
 ```
 
-</details>
+### 配置
 
-<details open>
-<summary><strong>🔐 API配置</strong></summary>
-
-创建 `configs/.env` 文件：
+复制示例配置文件并使用您的API密钥进行自定义：
 
 ```bash
-# 主要AI提供商配置
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_MODEL=gpt-4-turbo-preview
+cp configs/env.example configs/.env
+# 使用您喜欢的编辑器编辑配置文件
+nano configs/.env  # 或使用 vim, code 等
+```
 
-# 外部服务API
-Serper_API_KEY=your_serper_key          # Google搜索集成
+**必需的API密钥：**
+
+```bash
+# 主要AI提供商配置（必需）
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-5
+
+# 外部服务API（深度搜索功能必需）
+SERPER_API_KEY=your_serper_key          # Google搜索集成
 JINA_API_KEY=your_jina_key              # 网页内容提取
 
-# 可选：高级配置
-# CLAUDE_API_KEY=your_claude_key        # Anthropic Claude支持
+# 可选：其他AI提供商
+# ANTHROPIC_API_KEY=your_claude_key     # Anthropic Claude支持
 # DEEPSEEK_API_KEY=your_deepseek_key    # DeepSeek集成
+# GEMINI_API_KEY=your_gemini_key        # Google Gemini支持
 ```
 
-</details>
+💡 **提示**: `configs/env.example` 文件包含所有可用的配置选项和详细注释。
 
-### 🚀 快速运行
+### 启动
 
-<div align="center">
-
-| 模式 | 描述 | 命令 | 访问方式 |
-|------|-------------|---------|--------|
-| **🖥️ 前端** | 交互式Web界面 | `python launcher.py --mode frontend` | http://localhost:8501 |
-| **⚡ 后端** | 统一API模式 | `python launcher.py --mode backend --backend-mode unified` | 终端/API |
-
-</div>
-
-<details open>
-<summary><strong>💡 快速启动命令</strong></summary>
-
+**Web界面（推荐初学者使用）：**
 ```bash
-# Web界面（推荐初学者使用）
-bash run.sh frontend
-
-# 后端统一模式（推荐高级用户使用）
-bash run.sh backend unified
-
-# 直接Python执行
 python launcher.py --mode frontend
-python launcher.py --mode backend --backend-mode unified
+# 访问Web仪表板：http://localhost:8501
 ```
 
-</details>
+**命令行界面（推荐高级用户使用）：**
+```bash
+python launcher.py --mode backend --backend-mode unified
+# 通过终端提供智能多代理编排
+```
 
-> 📘 **需要更多配置选项？** 查看我们的综合[用户指南](user-guide.md)获取高级设置、故障排除和优化技巧。
+**专用代理访问：**
+```bash
+python launcher.py --mode backend --backend-mode deepsearch      # 深度搜索代理
+python launcher.py --mode backend --backend-mode general_assistant  # 编程助手
+python launcher.py --mode backend --backend-mode repository_agent   # 仓库代理
+```
+
+> 📘 **需要帮助？** 查看我们的综合[用户指南](user-guide.md)获取高级配置、故障排除和详细使用示例。
 
 
 ---
@@ -210,30 +206,10 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 ### 🚀 贡献方式
 
-<table align="center">
-<tr>
-<td align="center" width="25%">
-  <h4>🐛 问题报告</h4>
-  <p>帮助我们识别和修复问题</p>
-  <a href="https://github.com/QuantaAlpha/RepoMaster/issues">报告问题</a>
-</td>
-<td align="center" width="25%">
-  <h4>💡 功能请求</h4>
-  <p>建议新功能</p>
-  <a href="https://github.com/QuantaAlpha/RepoMaster/discussions">分享想法</a>
-</td>
-<td align="center" width="25%">
-  <h4>📖 文档</h4>
-  <p>改进指南和示例</p>
-  <a href="docs/">查看文档</a>
-</td>
-<td align="center" width="25%">
-  <h4>💻 代码贡献</h4>
-  <p>添加功能和改进</p>
-  <a href="#development-setup">开始</a>
-</td>
-</tr>
-</table>
+- **🐛 问题报告**: 通过[报告问题](https://github.com/QuantaAlpha/RepoMaster/issues)帮助我们识别和修复问题。
+- **💡 功能请求**: 有好想法？[建议新功能](https://github.com/QuantaAlpha/RepoMaster/discussions)。
+- **📖 文档**: 通过贡献我们的[文档](docs/)来改进清晰度和示例。
+- **💻 代码贡献**: 准备开始？查看我们的[开发环境设置](#development-setup)开始贡献。
 
 ### 🛠️ 开发环境设置
 
@@ -271,16 +247,16 @@ pytest tests/
 
 ## 📞 支持
 
-- 📧 **邮箱**：quantaalpha.ai@gmail.com
-- 🐛 **问题反馈**：[GitHub Issues](https://github.com/QuantaAlpha/RepoMaster/issues)
-- 💬 **讨论**：[GitHub Discussions](https://github.com/QuantaAlpha/RepoMaster/discussions)
-- 📖 **文档**：[完整文档](docs/)
+- 📧 **邮箱**: quantaalpha.ai@gmail.com
+- 🐛 **问题**: [GitHub Issues](https://github.com/QuantaAlpha/RepoMaster/issues)
+- 💬 **讨论**: [GitHub Discussions](https://github.com/QuantaAlpha/RepoMaster/discussions)
+- 📖 **文档**: [完整文档](docs/)
 
 ---
 
 ## 🙏 致谢
 
-感谢以下项目和社区的启发和支持：
+特别感谢：
 - [AutoGen](https://github.com/microsoft/autogen) - 多代理框架
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands) - 软件工程代理
 - [SWE-Agent](https://github.com/princeton-nlp/SWE-agent) - GitHub问题解决代理

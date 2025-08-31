@@ -11,10 +11,11 @@
 </p>
 
   <p style="margin: 20px 0;">
-    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-B31B1B.svg?style=for-the-badge&logo=arxiv&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/badge/Python-3.11+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/badge/License-MIT-00A98F.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white" /></a>
-    <a href="#"><img src="https://img.shields.io/github/stars/QuantaAlpha/RepoMaster?style=for-the-badge&logo=github&color=FFD700" /></a>
+    <a href="https://arxiv.org/pdf/2505.21577"><img src="https://img.shields.io/badge/arXiv-2505.21577-B31B1B.svg?style=flat-square&logo=arxiv&logoColor=white" /></a>
+    <a href="https://github.com/openai/mle-bench"><img src="https://img.shields.io/badge/Benchmark-MLE--Bench-FF6B35.svg?style=flat-square&logo=openai&logoColor=white" /></a>
+    <a href="https://github.com/QuantaAlpha/GitTaskBench"><img src="https://img.shields.io/badge/Benchmark-GitTaskBench-4A90E2.svg?style=flat-square&logo=github&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/badge/License-MIT-00A98F.svg?style=flat-square&logo=opensourceinitiative&logoColor=white" /></a>
+    <a href="#"><img src="https://img.shields.io/github/stars/QuantaAlpha/RepoMaster?style=flat-square&logo=github&color=FFD700" /></a>
   </p>
 
   <!-- <p style="margin: 15px 0;">
@@ -33,9 +34,17 @@
 ---
 
 
-[![Quick Start](https://img.shields.io/badge/🚀_Quick-Start-4CAF50?style=for-the-badge)](#-quick-start)
-[![Live Demo](https://img.shields.io/badge/🎬_Live-Demo-FF9800?style=for-the-badge)](#-quick-demo)
-[![Documentation](https://img.shields.io/badge/📖_Complete-Guide-2196F3?style=for-the-badge)](user-guide.md)
+<div align="center" style="margin: 30px 0;">
+  <a href="#-quick-start" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/🚀_Quick_Start-Get_Started_Now-4CAF50?style=for-the-badge&logo=rocket&logoColor=white&labelColor=2E7D32" alt="Quick Start" />
+  </a>
+  <a href="#-quick-demo" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/🎬_Live_Demo-Watch_Now-FF9800?style=for-the-badge&logo=play&logoColor=white&labelColor=F57C00" alt="Live Demo" />
+  </a>
+  <a href="user-guide.md" style="text-decoration: none; margin: 0 8px;">
+    <img src="https://img.shields.io/badge/📖_Documentation-Complete_Guide-2196F3?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=1565C0" alt="Documentation" />
+  </a>
+</div>
 
 </div>
 </div>
@@ -65,76 +74,66 @@
 
 
 
-## 🚀 Quick Start
+## Quick Start
 
-### 🛠️ Installation
-
-<details open>
-<summary><strong>📦 Dependencies Installation</strong></summary>
+### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/QuantaAlpha/RepoMaster.git
-
-# Navigate to project directory
 cd RepoMaster
-
-# Install required dependencies
 pip install -r requirements.txt
 ```
 
-</details>
+### Configuration
 
-<details open>
-<summary><strong>🔐 API Configuration</strong></summary>
-
-Create your `configs/.env` file:
+Copy the example configuration file and customize it with your API keys:
 
 ```bash
-# Primary AI Provider Configuration
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_MODEL=gpt-4-turbo-preview
+cp configs/env.example configs/.env
+# Edit the configuration file with your preferred editor
+nano configs/.env  # or use vim, code, etc.
+```
 
-# External Service APIs
-Serper_API_KEY=your_serper_key          # Google search integration
+**Required API Keys:**
+```bash
+# Primary AI Provider (Required)
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-5
+
+# External Services (Required for deep search functionality)
+SERPER_API_KEY=your_serper_key          # Google search integration
 JINA_API_KEY=your_jina_key              # Web content extraction
 
-# Optional: Advanced Configuration
-# CLAUDE_API_KEY=your_claude_key        # Anthropic Claude support
+# Optional: Additional AI Providers
+# ANTHROPIC_API_KEY=your_claude_key     # Anthropic Claude support
 # DEEPSEEK_API_KEY=your_deepseek_key    # DeepSeek integration
+# GEMINI_API_KEY=your_gemini_key        # Google Gemini support
 ```
 
-</details>
+💡 **Tip**: The `configs/env.example` file contains all available configuration options with detailed comments.
 
-### 🚀 Quick Run
+### Launch
 
-<div align="center">
-
-| Mode | Description | Command | Access |
-|------|-------------|---------|--------|
-| **🖥️ Frontend** | Interactive Web UI | `python launcher.py --mode frontend` | http://localhost:8501 |
-| **⚡ Backend** | Unified API Mode | `python launcher.py --mode backend --backend-mode unified` | Terminal/API |
-
-</div>
-
-<details open>
-<summary><strong>💡 Quick Launch Commands</strong></summary>
-
+**Web Interface (Recommended for beginners):**
 ```bash
-# Web Interface (Recommended for beginners)
-bash run.sh frontend
-
-# Backend Unified Mode (Recommended for advanced users)
-bash run.sh backend unified
-
-# Direct Python execution
 python launcher.py --mode frontend
-python launcher.py --mode backend --backend-mode unified
+# Access the web dashboard at: http://localhost:8501
 ```
 
-</details>
+**Command Line Interface (Recommended for advanced users):**
+```bash
+python launcher.py --mode backend --backend-mode unified
+# Provides intelligent multi-agent orchestration via terminal
+```
 
-> 📘 **Need more configuration options?** Check our comprehensive [User Guide](user-guide.md) for advanced setup, troubleshooting, and optimization tips.
+**Specialized Agent Access:**
+```bash
+python launcher.py --mode backend --backend-mode deepsearch      # Deep Search Agent
+python launcher.py --mode backend --backend-mode general_assistant  # Programming Assistant
+python launcher.py --mode backend --backend-mode repository_agent   # Repository Agent
+```
+
+> 📘 **Need help?** Check our comprehensive [User Guide](user-guide.md) for advanced configuration, troubleshooting, and detailed usage examples.
 
 
 ---
@@ -211,30 +210,10 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 ### 🚀 Ways to Contribute
 
-<table align="center">
-<tr>
-<td align="center" width="25%">
-  <h4>🐛 Bug Reports</h4>
-  <p>Help us identify and fix issues</p>
-  <a href="https://github.com/QuantaAlpha/RepoMaster/issues">Report Bugs</a>
-</td>
-<td align="center" width="25%">
-  <h4>💡 Feature Requests</h4>
-  <p>Suggest new capabilities</p>
-  <a href="https://github.com/QuantaAlpha/RepoMaster/discussions">Share Ideas</a>
-</td>
-<td align="center" width="25%">
-  <h4>📖 Documentation</h4>
-  <p>Improve guides and examples</p>
-  <a href="docs/">View Docs</a>
-</td>
-<td align="center" width="25%">
-  <h4>💻 Code Contributions</h4>
-  <p>Add features and improvements</p>
-  <a href="#development-setup">Get Started</a>
-</td>
-</tr>
-</table>
+- **🐛 Bug Reports**: Help us identify and fix issues by [reporting them](https://github.com/QuantaAlpha/RepoMaster/issues).
+- **💡 Feature Requests**: Have a great idea? [Suggest a new feature](https://github.com/QuantaAlpha/RepoMaster/discussions).
+- **📖 Documentation**: Improve clarity and examples by contributing to our [documentation](docs/).
+- **💻 Code Contributions**: Ready to jump in? See our [development setup](#development-setup) to get started.
 
 ### 🛠️ Development Setup
 
