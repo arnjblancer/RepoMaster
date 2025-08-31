@@ -68,7 +68,7 @@ def setup_environment():
         print(f"📝 Please copy the example configuration file:")
         print(f"   cp {env_example_file} {env_file}")
         print(f"   Then edit {env_file} with your API keys")
-        print("💡 See README.md or user-guide.md for detailed setup instructions")
+        print("💡 See README.md or USAGE.md for detailed setup instructions")
         return False
     
     # Load environment variables if .env exists
@@ -86,7 +86,7 @@ def setup_environment():
         if missing_keys:
             print(f"⚠️  Missing required API keys in .env file: {', '.join(missing_keys)}")
             print(f"📝 Please edit {env_file} and add the missing keys")
-            print("💡 See README.md or user-guide.md for API key setup instructions")
+            print("💡 See README.md or USAGE.md for API key setup instructions")
             return False
             
         return True
@@ -106,7 +106,7 @@ def setup_environment():
             print(f"📝 Please create configuration file:")
             print(f"   cp {env_example_file} {env_file}")
             print(f"   Then edit {env_file} with your API keys")
-        print("💡 See README.md or user-guide.md for setup instructions")
+        print("💡 See README.md or USAGE.md for setup instructions")
         return False
         
     print("✅ Using system environment variables")
@@ -484,7 +484,7 @@ def show_available_modes():
 
 📖 Get complete help: python launcher.py --help
 
-💡 First time use? Reference: user-guide.md
+💡 First time use? Reference: USAGE.md
 """)
 
 def main():

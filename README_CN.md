@@ -40,7 +40,7 @@
   <a href="#-快速演示" style="text-decoration: none; margin: 0 8px;">
     <img src="https://img.shields.io/badge/🎬_实时演示-立即观看-FF9800?style=for-the-badge&logo=play&logoColor=white&labelColor=F57C00" alt="实时演示" />
   </a>
-  <a href="user-guide.md" style="text-decoration: none; margin: 0 8px;">
+  <a href="USAGE.md" style="text-decoration: none; margin: 0 8px;">
     <img src="https://img.shields.io/badge/📖_使用文档-完整指南-2196F3?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=1565C0" alt="使用文档" />
   </a>
 </div>
@@ -129,7 +129,7 @@ python launcher.py --mode backend --backend-mode general_assistant  # 编程助�
 python launcher.py --mode backend --backend-mode repository_agent   # 仓库代理
 ```
 
-> 📘 **需要帮助？** 查看我们的综合[用户指南](user-guide.md)获取高级配置、故障排除和详细使用示例。
+> 📘 **需要帮助？** 查看我们的综合[用户指南](USAGE.md)获取高级配置、故障排除和详细使用示例。
 
 
 ---
@@ -191,7 +191,7 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 </div>
 
-**更多高级用法、配置选项和故障排除，请参阅我们的[用户指南](user-guide.md).**
+**更多高级用法、配置选项和故障排除，请参阅我们的[用户指南](USAGE.md).**
 
 ---
 

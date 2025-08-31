@@ -41,7 +41,7 @@
   <a href="#-quick-demo" style="text-decoration: none; margin: 0 8px;">
     <img src="https://img.shields.io/badge/🎬_Live_Demo-Watch_Now-FF9800?style=for-the-badge&logo=play&logoColor=white&labelColor=F57C00" alt="Live Demo" />
   </a>
-  <a href="user-guide.md" style="text-decoration: none; margin: 0 8px;">
+  <a href="USAGE.md" style="text-decoration: none; margin: 0 8px;">
     <img src="https://img.shields.io/badge/📖_Documentation-Complete_Guide-2196F3?style=for-the-badge&logo=gitbook&logoColor=white&labelColor=1565C0" alt="Documentation" />
   </a>
 </div>
@@ -133,7 +133,7 @@ python launcher.py --mode backend --backend-mode general_assistant  # Programmin
 python launcher.py --mode backend --backend-mode repository_agent   # Repository Agent
 ```
 
-> 📘 **Need help?** Check our comprehensive [User Guide](user-guide.md) for advanced configuration, troubleshooting, and detailed usage examples.
+> 📘 **Need help?** Check our comprehensive [User Guide](USAGE.md) for advanced configuration, troubleshooting, and detailed usage examples.
 
 
 ---
@@ -195,7 +195,7 @@ https://github.com/user-attachments/assets/a21b2f2e-a31c-4afd-953d-d143beef781a
 
 </div>
 
-**For advanced usage, configuration options, and troubleshooting, see our [User Guide](user-guide.md).**
+**For advanced usage, configuration options, and troubleshooting, see our [User Guide](USAGE.md).**
 
 ---
 
