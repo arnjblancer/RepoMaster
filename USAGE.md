@@ -241,27 +241,27 @@ For detailed programming examples, see our [Documentation](../docs/).
 
 ### 🤖 AI/ML Tasks
 **"Train an image classifier on CIFAR-10 dataset using transfer learning"**
-- Automatically finds relevant ML repositories and frameworks
-- Sets up complete training pipeline with best practices
-- Handles data loading, model configuration, and training execution
+>- Automatically finds relevant ML repositories and frameworks
+>- Sets up complete training pipeline with best practices
+>- Handles data loading, model configuration, and training execution
 
 ### 📄 Data Processing  
 **"Extract tables from PDF reports and convert to structured CSV format"**
-- Discovers PDF processing libraries and tools
-- Implements extraction pipeline with error handling
-- Outputs clean, structured data in the desired format
+>- Discovers PDF processing libraries and tools
+>- Implements extraction pipeline with error handling
+>- Outputs clean, structured data in the desired format
 
 ### 🌐 Web Development
 **"Create a REST API for user authentication with JWT tokens"**
-- Searches for authentication frameworks and security libraries
-- Generates production-ready API with proper security practices
-- Includes documentation and testing examples
+>- Searches for authentication frameworks and security libraries
+>- Generates production-ready API with proper security practices
+>- Includes documentation and testing examples
 
 ### 👁️ Computer Vision
 **"Detect and count objects in surveillance video footage"**
-- Finds state-of-the-art object detection models
-- Implements video processing pipeline with optimization
-- Provides detailed analysis results and visualizations
+>- Finds state-of-the-art object detection models
+>- Implements video processing pipeline with optimization
+>- Provides detailed analysis results and visualizations
 
 ---
 
