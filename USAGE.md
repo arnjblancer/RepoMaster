@@ -211,7 +211,7 @@ python launcher.py --mode frontend \
 # Backend configuration options  
 python launcher.py --mode backend --backend-mode unified \
   --api-type openai \                  # API provider (default: basic)
-  --temperature 0.1 \                  # Model temperature (default: 0.1)
+  --temperature 1.0 \                  # Model temperature (default: 1.0)
   --work-dir /custom/path \            # Working directory (default: coding)
   --timeout 300 \                      # Request timeout in seconds (default: 120)
   --max-tokens 8000                    # Maximum token count (default: 4000)
