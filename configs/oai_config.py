@@ -187,7 +187,7 @@ def get_llm_config(
     api_type: str = None,
     timeout: int = 240,
     temperature: float = 1.0,
-    top_p=0.95,
+    top_p: float | None = None,
     service_type: str = "",
     validate_api_key: bool = True,
 ):
@@ -198,7 +198,7 @@ def get_llm_config(
         api_type: Type of API configuration to use. If None, uses provider priority.
         timeout: Request timeout in seconds
         temperature: Model temperature parameter
-        top_p: Model top_p parameter
+        top_p: Model top_p parameter. Only included when explicitly set.
         service_type: Specific service type configuration
         validate_api_key: Whether to validate API key and use fallback if needed
 
@@ -227,7 +227,8 @@ def get_llm_config(
     # parameter when it deviates from the default of 1.0.
     if temperature is not None and temperature != 1.0:
         api_config["temperature"] = temperature
-    api_config["top_p"] = top_p
+    if top_p is not None and top_p != 1.0:
+        api_config["top_p"] = top_p
 
     return api_config
 
