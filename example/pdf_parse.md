@@ -601,7 +601,7 @@ Results must be saved in the <WORKSPACE_ROOT>/coding directory. If results are s
 **Core Objective**: Quickly understand and analyze the code repository, generate and execute necessary code or call tools to efficiently and accurately complete user-specified tasks.
 
 ✅ Working Directory: <WORKSPACE_ROOT>/coding
-llm_config: {'config_list': [{'model': 'gpt-4o', 'api_key': 'sk-***REDACTED***', 'base_url': '***REDACTED_BASE_URL***'}], 'timeout': 240, 'temperature': 0.1, 'top_p': 0.95}
+llm_config: {'config_list': [{'model': 'gpt-4o', 'api_key': 'sk-***REDACTED***', 'base_url': '***REDACTED_BASE_URL***'}], 'timeout': 240, 'temperature': 1.0, 'top_p': 0.95}
 Load existing virtual environment: ./.venvs/persistent_venv
 ====================================================================================================
 Analyzing code repository: <WORKSPACE_ROOT>/coding/arxiv2text
